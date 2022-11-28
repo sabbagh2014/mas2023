@@ -39,9 +39,9 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 
 const menuLinks = [
   {
-    //label: "Explore",
-    //href: "/bundles",
-    //isLink: true,
+    label: "Explore",
+    href: "/bundles",
+    isLink: true,
   },
   {
     label: "Creators",
