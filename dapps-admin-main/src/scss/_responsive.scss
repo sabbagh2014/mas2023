@@ -1,0 +1,40 @@
+@media (max-width: 1640px) {
+  .tokenList li {
+    width: 101px;
+  }
+}
+@media (max-width: 1440px) {
+  .tokenList li {
+    width: 85px;
+  }
+}
+@media (max-width: 1366px) {
+  .tokenList li {
+    width: 80px;
+  }
+}
+@media (max-width: 1280px) {
+  .tokenList li {
+    width: 75px;
+  }
+}
+@media (max-width: 1024px) {
+  .tokenList li {
+    width: 75px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+  .tokenList li {
+    width: 67px;
+  }
+  .imgWidth {
+    max-width: 100%;
+  }
+}
+.MuiFormHelperText-contained {
+  margin-left: 0px;
+  margin-right: 14px;
+}

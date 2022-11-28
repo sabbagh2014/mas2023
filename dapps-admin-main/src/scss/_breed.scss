@@ -1,0 +1,126 @@
+.btnWidth {
+  width: 300px !important;
+  max-width: 100% !important;
+}
+.btn-block {
+  width: 100% !important;
+}
+.Logocenter {
+  text-align: center;
+}
+.topmenu {
+  border-bottom: solid 2px #707070;
+}
+.btnHight {
+  height: 35px;
+  font-size: 12px !important;
+  margin-top: 16px !important;
+}
+
+.removeredius {
+  width: 150px;
+  border-radius: 0 !important;
+  max-width: 100%;
+}
+
+.tokenList {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    color: #141518;
+    width: 103px;
+    border: solid 0.5px #e5e3dd;
+    margin: 0px 5px;
+    display: flex;
+    padding: 5px;
+    position: relative;
+    font-size: 10px;
+    text-align: center;
+    justify-content: center;
+    background-color: #fff;
+
+    svg {
+      color: #60be60;
+      right: 0;
+      bottom: 0px;
+      position: absolute;
+      font-size: 20px;
+    }
+    img {
+      width: 30px;
+    }
+  }
+}
+
+.chat-Box {
+  border: solid 0.5px #e5e3dd;
+  padding: 15px;
+  height: 65vh;
+  overflow-y: scroll;
+  .right-Box {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+    div {
+      position: relative;
+      border-radius: 9px;
+      // box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 16%);
+      background-image: linear-gradient(to bottom, #c04848, #480048);
+      padding: 15px;
+      max-width: 500px;
+      min-width: 100px;
+      font-size: 15px;
+      color: #fff;
+      span {
+        position: absolute;
+        font-size: 11px;
+        color: #000;
+        right: 0;
+        bottom: -25px;
+      }
+    }
+  }
+  .left-Box {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+    div {
+      position: relative;
+      border-radius: 9px;
+      box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
+      background-color: #fff;
+      padding: 15px;
+      max-width: 500px;
+      min-width: 100px;
+      font-size: 15px;
+      color: #707070;
+      span {
+        position: absolute;
+        font-size: 11px;
+        color: #000;
+        right: 0;
+        bottom: -25px;
+      }
+    }
+  }
+}
+.userimg {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.p.MuiFormHelperText-root.MuiFormHelperText-contained.Mui-error {
+  margin-left: 0px !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
