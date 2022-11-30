@@ -34,20 +34,20 @@ module.exports = {
     api_secret: "EBn5oevs8bEBCLj6J5_UdtPhGmk",
   },
   twilio: {
-    account_sid: "ACd7c452995eacfed2b309134173080670",
-    auth_token: "c7774a2b17feae2673e6c2669569ad7f",
-    //sg_api: "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",
+    account_sid: "AC4c05c8ecab549780c037a8c7367c36ec",
+    auth_token: "862975e114e6db09484c4d9cb0314991",
+    sg_api: "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",
   },
 // Download the helper library from https://www.twilio.com/docs/node/install
                      // Find your Account SID and Auth Token in Account Info and set the environment variables.
                      // See http://twil.io/secure
-                     const accountSid = process.env.TWILIO_ACCOUNT_SID;
-                     const authToken = process.env.TWILIO_AUTH_TOKEN;
-                     const client = require('twilio')(accountSid, authToken);
+                     //const accountSid = process.env.TWILIO_ACCOUNT_SID;
+                     //const authToken = process.env.TWILIO_AUTH_TOKEN;
+                     //const client = require('twilio')(accountSid, authToken);
 
-                     client.messages 
-                      .create({body: 'Hi there', from: '+19497870839', to: '+905445735893'})
-                      .then(message => console.log(message.sid));
+                     //client.messages 
+                      //.create({body: 'Hi there', from: '+19497870839', to: '+905445735893'})
+                      //.then(message => console.log(message.sid));
 
                     
   usdtContractAddress: "0x7ef95a0FEE0Dd31b22626fA2e10Ee6A223F8a684", // bsc testnet
