@@ -48,8 +48,8 @@ const schemaDefination = new Schema(
       default: "PROCESSING",
     },
     transactionType: { type: String },
-    email_security_verification: {type:Boolean, default:false},
-    sms_security_verification: {type:Boolean, default:false},
+    //email_security_verification: {type:Boolean, default:false},
+    //sms_security_verification: {type:Boolean, default:false},
     status: { type: String, default: status.ACTIVE },
   },
   options
