@@ -39,9 +39,9 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 
 const menuLinks = [
   {
-    label: "Explore",
-    href: "/bundles",
-    isLink: true,
+    //label: "Explore",
+    //href: "/bundles",
+    //isLink: true,
   },
   {
     label: "Creators",
@@ -49,7 +49,7 @@ const menuLinks = [
     isLink: true,
   },
   {
-    label: "Leaderboard",
+    label: "user-list",
     href: "/user-list",
     isLink: true,
   },
