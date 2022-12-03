@@ -170,8 +170,8 @@ const VerificationAlert = ({verify}) => {
   return (
     <box>
     <Alert severity="warning" variant="outlined">
-      <AlertTitle>Security Verification</AlertTitle>
-       To secure your account and enjoy full MAS Platform features please verify
+      //<AlertTitle>Security Verification</AlertTitle>
+       //To secure your account and enjoy full MAS Platform features please verify
        {' '}
        {verify.includes('email') && 'your email address '}
        {verify.length>1 && ' and '}
