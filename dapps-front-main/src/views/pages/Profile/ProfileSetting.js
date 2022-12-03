@@ -169,7 +169,7 @@ const VerificationAlert = ({verify}) => {
   const [verifyOTPOpen, setVerifyOTPOpen] = useState(false);
   return (
     <box>
-    <Alert severity="warning" variant="outlined">
+    //<Alert severity="warning" variant="outlined">
       //<AlertTitle>Security Verification</AlertTitle>
        //To secure your account and enjoy full MAS Platform features please verify
        {' '}
