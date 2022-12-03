@@ -177,28 +177,28 @@ export function copyTextById(id) {
        //{verify.length>1 && ' and '}
        //{verify.includes('sms') && 'your phone number '} 
       // <Button 
-      variant="text"
-      onClick={()=>setVerifyOTPOpen(true)}
-       >
-        check here!
-      </Button>
-    </Alert>
-    <VerifyOtp 
-      open={verifyOTPOpen} 
-      handleClose={()=> setVerifyOTPOpen(false)}
-      channels={verify}
-      context={'verifyLater'}
-      emailVerificationSent={false}
-      smsVerificationSent={false}
-      successCallback={()=>{
-        setVerifyOTPOpen(false);
-        user.updateUserData();
-        toast.success("Security Verification complete!");
-      }}
-    />
-    </box>
-  )
-}
+      //variant="text"
+      //onClick={()=>setVerifyOTPOpen(true)}
+       //>
+        //check here!
+      //</Button>
+    //</Alert>
+    //<VerifyOtp 
+      //open={verifyOTPOpen} 
+      //handleClose={()=> setVerifyOTPOpen(false)}
+      //channels={verify}
+      //context={'verifyLater'}
+      //emailVerificationSent={false}
+      //smsVerificationSent={false}
+      //successCallback={()=>{
+        //setVerifyOTPOpen(false);
+        //user.updateUserData();
+        //toast.success("Security Verification complete!");
+      //}}
+    //>
+    //</box>
+  //)
+//}
 
 export default function ProfileSettings() {
   const user = useContext(UserContext);
