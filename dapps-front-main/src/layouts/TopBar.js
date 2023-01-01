@@ -41,7 +41,7 @@ const menuLinks = [
   {
     label: "Explore",
     href: "/bundles",
-   isLink: true,
+    isLink: true,
   },
   {
     label: "Creators",
@@ -49,7 +49,7 @@ const menuLinks = [
     isLink: true,
   },
   {
-    label: "user",
+    label: "Leaderboard",
     href: "/user-list",
     isLink: true,
   },
@@ -531,7 +531,7 @@ export default function Header() {
                       className={classes.createButton}
                       onClick={() => navigate("/profile")}
                     >
-                      mascoins
+                      Create on MAS
                     </Button>
                 }
 
