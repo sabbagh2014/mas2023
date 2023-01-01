@@ -49,7 +49,7 @@ const menuLinks = [
     isLink: true,
   },
   {
-    label: "user-list",
+    label: "user",
     href: "/user-list",
     isLink: true,
   },
