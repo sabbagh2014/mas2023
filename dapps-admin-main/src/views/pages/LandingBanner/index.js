@@ -446,7 +446,7 @@ export default function Banners() {
                 >
                   Yes 
                 </Button>
-                <Button onClick={()=>setOpenConfirm(false)} color="primary" autoFocus>
+                <Button onClick={()=>setOpenConfirm(false)} color="primary" >
                   No
                 </Button>
               </DialogActions>

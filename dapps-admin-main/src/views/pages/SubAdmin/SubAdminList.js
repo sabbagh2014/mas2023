@@ -434,7 +434,7 @@ export default function SubAdminList(props) {
                     variant="contained"
                     size="large"
                     color="secondary"
-                    autoFocus
+                    
                   >
                     No
                   </Button>
@@ -468,7 +468,7 @@ export default function SubAdminList(props) {
                   variant="contained"
                   size="large"
                   color="secondary"
-                  autoFocus
+                  
                   disabled={loaderDe}
                 >
                   No
