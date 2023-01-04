@@ -133,7 +133,7 @@ export default function Login({ data, auctionDetails }) {
         } else {
           seterrmsg(err.message);
         }
-        console.log(err.message);
+        
       });
   };
   const deleteAuctionHandler = async () => {
@@ -170,7 +170,7 @@ export default function Login({ data, auctionDetails }) {
         } else {
           seterrmsg(err.message);
         }
-        console.log(err.message);
+        
       });
   };
   return (

@@ -59,6 +59,6 @@ export const getBase64 = (file, cb) => {
     cb(reader.result)
   }
   reader.onerror = function (err) {
-    console.log('Error: ', err)
+    
   }
 }

@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Login() {
   const classes = useStyles()
   const auth = useContext(AuthContext)
-  console.log(auth?.platformBalance)
+  
   return (
     <Box className={classes.LoginBox}>
       <Container maxWidth="md">
