@@ -395,7 +395,7 @@ export default function StaticContent(props) {
             </DialogContent>
             <DialogActions>
               <Button color="primary">Yes</Button>
-              <Button onClick={closeBlock} color="primary" autoFocus>
+              <Button onClick={closeBlock} color="primary" >
                 No
               </Button>
             </DialogActions>
@@ -414,7 +414,7 @@ export default function StaticContent(props) {
             </DialogContent>
             <DialogActions>
               <Button color="primary">Yes</Button>
-              <Button onClick={closeDelete} color="primary" autoFocus>
+              <Button onClick={closeDelete} color="primary" >
                 No
               </Button>
             </DialogActions>

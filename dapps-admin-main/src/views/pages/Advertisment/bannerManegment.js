@@ -438,7 +438,7 @@ export default function bunnerMangment(props) {
                 >
                   Yes {loaderDe && <ButtonCircularProgress />}
                 </Button>
-                <Button onClick={handleDeactive} color="primary" autoFocus>
+                <Button onClick={handleDeactive} color="primary" >
                   No
                 </Button>
               </DialogActions>
@@ -478,7 +478,7 @@ export default function bunnerMangment(props) {
               <Button color="primary" onClick={deleteBanner}>
                 Yes
               </Button>
-              <Button onClick={closeDelete} color="primary" autoFocus>
+              <Button onClick={closeDelete} color="primary" >
                 No
               </Button>
             </DialogActions>
