@@ -200,7 +200,7 @@ export default function UsersIndex() {
       })
       .catch((err) => {
         setIsLoading(false);
-        console.log(err.message);
+        
       });
   };
 
@@ -222,7 +222,7 @@ export default function UsersIndex() {
       }
     })
     .catch((err) => {
-      console.log(err.message);
+      
     });
   };
 

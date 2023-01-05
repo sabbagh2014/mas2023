@@ -84,7 +84,7 @@ const EditProduct = (props) => {
 
   const [coverurl, setcoverurl] = useState(user.userProfileData?.usercover);
   const [profile, setprofile] = useState();
-  console.log("countryCode", countryCode);
+  
   const openConfirm = () => {
     setConfirm(true);
   };
@@ -103,7 +103,7 @@ const EditProduct = (props) => {
       cb(reader.result);
     };
     reader.onerror = function (err) {
-      console.log("Error: ", err);
+      
     };
   };
   const accessToken = window.sessionStorage.getItem("AccessToken");

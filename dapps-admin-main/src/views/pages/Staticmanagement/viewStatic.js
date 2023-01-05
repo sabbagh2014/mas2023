@@ -42,7 +42,7 @@ const ViewMilestone = () => {
   const location = useLocation();
   const accessToken = window.sessionStorage.getItem("AccessToken");
   const [users, setUsers] = useState("");
-  console.log("users", users);
+  
   const ViewStatics = async () => {
     axios
       .get(
@@ -61,18 +61,18 @@ const ViewMilestone = () => {
           // setDisplayname
           // console.log(result)
           setUsers(response.data.result);
-          console.log(response);
+          
         }
       })
       .catch((response) => {
-        console.log("response", response);
+        
       });
   };
   useEffect(() => {
     ViewStatics();
   }, [1]);
-  console.log("users", users);
-  console.log("dataType View States");
+  
+  
   return (
     <Container maxWidth="xl" style={{ marginTop: "50px" }}>
       {!users ? (

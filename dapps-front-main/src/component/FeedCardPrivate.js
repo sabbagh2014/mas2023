@@ -190,7 +190,7 @@ export default function UsersCard({ data, index, updateList, allFeed }) {
       })
       .catch((err) => {
         setIsloading(false);
-        console.log(err.message);
+        
         toast.error("Something went wrong");
       });
     // } else {

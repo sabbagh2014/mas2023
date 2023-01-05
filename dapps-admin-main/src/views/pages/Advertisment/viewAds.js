@@ -87,7 +87,7 @@ const ViewMilestone = (props) => {
       })
       if (res.data.statusCode === 200) {
         setUsers(res.data.result)
-        console.log(res)
+        
       }
     } catch (error) {
       console.log(error)

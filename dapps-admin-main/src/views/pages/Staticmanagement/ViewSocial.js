@@ -171,7 +171,7 @@ export default function ViewSocial() {
   const classes = useStyles();
   const history = useHistory();
   const location = useLocation();
-  console.log("location---", location);
+  
   const [link, setLink] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 

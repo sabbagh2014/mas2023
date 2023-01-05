@@ -53,9 +53,9 @@ Mongoose.model("collection", schemaDefination).find(
   { collectionType: "DEFAULT" },
   (err, result) => {
     if (err) {
-      console.log("Default static collection error", err);
+      
     } else if (result.length != 0) {
-      console.log("Default static collection");
+      
     } else {
       var obj = {
         contractAddress: "0xb5de0c3753b6e1b4dba616db82767f17513e6d4e",
@@ -72,9 +72,9 @@ Mongoose.model("collection", schemaDefination).find(
         obj,
         (err1, staticResult) => {
           if (err1) {
-            console.log("Static collection error.", err1);
+            
           } else {
-            console.log("Static collection created.", staticResult);
+            
           }
         }
       );

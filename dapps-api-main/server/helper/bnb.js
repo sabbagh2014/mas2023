@@ -49,7 +49,7 @@ async function withdraw(fromAddress, fromPrivateKey, toAddress, amountToSend) {
 
     // Check is balance low
     if (status == false) {
-      console.log({ status: status, message: "BNB Low Balance" });
+      
       return {
         status: false
       }

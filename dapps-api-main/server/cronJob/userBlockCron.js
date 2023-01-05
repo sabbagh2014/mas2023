@@ -14,7 +14,7 @@ new cronJob("*/10 * * * * *", async function () {
     tillValid: { $lt: new Date().toISOString() },
   });
   if (blockUserRes.length == 0) {
-    console.log("No records found for block user.");
+    
   } else {
     for (let index of blockUserRes) {
       const updateRes = await updateBlockUser(
@@ -23,7 +23,7 @@ new cronJob("*/10 * * * * *", async function () {
       );
       await updateUser({ _id: index.userId._id }, { blockStatus: false });
       if (updateRes) {
-        console.log(`Activated....userId===>>${index.userId._id}`);
+        
       }
     }
   }

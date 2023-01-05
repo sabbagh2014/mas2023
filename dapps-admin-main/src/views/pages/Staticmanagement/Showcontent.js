@@ -38,10 +38,10 @@ const Showcontent = (props) => {
   const accessToken = window.sessionStorage.getItem("AccessToken");
   const [showdata, setshowdata] = React.useState([]);
 
-  console.log("mydatatdata", showdata);
+  
 
   const showTermConditionapi = async (id) => {
-    console.log("mydataid", id);
+    
     await axios
       .get(Apiconfig.getStaticContent, {
         params: {
@@ -56,7 +56,7 @@ const Showcontent = (props) => {
       .then(async (res) => {
         if (res.data.response_code === 200) {
           setshowdata(res.data.result);
-          console.log("%%%44554%%%", res.data.result);
+          
         }
       });
   };

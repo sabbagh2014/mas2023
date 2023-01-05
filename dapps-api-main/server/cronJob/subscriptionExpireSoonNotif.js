@@ -18,7 +18,7 @@ new cronJob("*/50 * * * * *", async function () {
     subscriptionStatus: status.ACTIVE,
   });
   if (subscriberRes.length == 0) {
-    console.log("No records found for subscription alert.");
+    
   } else {
     for (let i = 0; i < subscriberRes.length; i++) {
       const updateRes = await updateSubscription(
@@ -30,7 +30,7 @@ new cronJob("*/50 * * * * *", async function () {
         subscriberRes[i].nftId.bundleName
       );
       if (updateRes) {
-        console.log(`alert done....userId===>>${subscriberRes[i].nftId._id}`);
+        
       }
     }
   }

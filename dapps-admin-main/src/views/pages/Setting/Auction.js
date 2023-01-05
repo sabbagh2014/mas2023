@@ -72,7 +72,7 @@ export default function Login() {
         setIsLoading(false);
       })
       .catch((err) => {
-        console.log(err.message);
+        
         setIsLoading(false);
       });
   };

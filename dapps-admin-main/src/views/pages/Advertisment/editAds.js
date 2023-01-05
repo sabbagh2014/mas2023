@@ -94,7 +94,7 @@ export default function BannerSection() {
         },
       })
       if (res.data.statusCode === 200) {
-        console.log('response----', res.data.result)
+        
         setSelectedADId(res.data.result)
       }
     } catch (error) {
@@ -137,7 +137,7 @@ export default function BannerSection() {
           })
           .then((res) => {
             if (res.data.statusCode === 200) {
-              console.log(res)
+              
 
               setprocess(false)
               history.push('/banner-managment')
@@ -150,7 +150,7 @@ export default function BannerSection() {
 
           .catch((err) => {
             setprocess(false)
-            console.log(err.message)
+            
             toast.error('error')
           })
       } catch {

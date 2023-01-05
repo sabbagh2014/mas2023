@@ -29,9 +29,9 @@ Mongoose.model("referral", referralSchema).find(
   { status: { $ne: status.DELETE } },
   async (err, result) => {
     if (err) {
-      console.log("Default referral creation error", err);
+      
     } else if (result.length != 0) {
-      console.log("Default referral already created.");
+      
     } else {
       let obj = {
         coin: "MAS",
@@ -42,9 +42,9 @@ Mongoose.model("referral", referralSchema).find(
         obj,
         (err1, staticResult) => {
           if (err1) {
-            console.log("Default referral error.", err1);
+            
           } else {
-            console.log("Default referral created.", staticResult);
+            
           }
         }
       );

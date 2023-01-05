@@ -100,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Login() {
   const classes = useStyles()
-  console.log(window.sessionStorage.getItem('AccessToken'))
+  
   const [modedata, setData] = useState([])
   const [page, setpage] = useState(1)
   const [numberOfPages, setNumberOfPages] = useState(1)
@@ -127,7 +127,7 @@ export default function Login() {
         }
       })
       .catch((err) => {
-        console.log(err.message)
+        
         setIsLoading(false)
       })
   }

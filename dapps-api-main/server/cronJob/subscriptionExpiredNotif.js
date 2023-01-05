@@ -16,7 +16,7 @@ new cronJob("*/50 * * * * *", async function () {
     subscriptionStatus: status.ACTIVE,
   });
   if (subscriberRes.length == 0) {
-    console.log("No records found.");
+    
   } else {
     for (let i = 0; i < subscriberRes.length; i++) {
       // await updateNft({ _id: subscriberRes[i].nftId._id }, { $pull: { subscribers: subscriberRes[i].userId } });
@@ -33,7 +33,7 @@ new cronJob("*/50 * * * * *", async function () {
         subscriberRes[i].nftId.bundleName
       );
       if (updateRes) {
-        console.log(`Expired....userId===>>${subscriberRes[i].nftId._id}`);
+        
       }
     }
   }

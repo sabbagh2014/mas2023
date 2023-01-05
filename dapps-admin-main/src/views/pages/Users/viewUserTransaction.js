@@ -191,7 +191,7 @@ export default function Login(props) {
       .catch((err) => {
         setLoaderDeposit(false);
 
-        console.log(err.message);
+        
       });
   };
   useEffect(() => {

@@ -112,7 +112,7 @@ export default function Login() {
             setIsLoading(false);
           })
           .catch((err) => {
-            console.log(err);
+            
             setMessage("Try after sometime...");
             setIsLoading(false);
           });

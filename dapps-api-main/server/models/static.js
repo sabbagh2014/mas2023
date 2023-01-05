@@ -20,9 +20,9 @@ const schemaDefination = new Schema(
 module.exports = Mongoose.model("static_content", schemaDefination);
 Mongoose.model("static_content", schemaDefination).find({}, (err, result) => {
   if (err) {
-    console.log("Default static content error", err);
+    
   } else if (result.length != 0) {
-    console.log("Default static content");
+    
   } else {
     var obj1 = {
       type: "termsConditions",
@@ -84,9 +84,9 @@ Mongoose.model("static_content", schemaDefination).find({}, (err, result) => {
       obj8,
       (staticErr, staticResult) => {
         if (staticErr) {
-          console.log("Static content error.", staticErr);
+          
         } else {
-          console.log("Static content created.", staticResult);
+          
         }
       }
     );

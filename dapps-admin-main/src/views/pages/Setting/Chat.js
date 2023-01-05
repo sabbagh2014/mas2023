@@ -179,7 +179,7 @@ export default function Login() {
         .then(async (res) => {
           setIsLoading(false);
           if (res.data.statusCode === 200) {
-            console.log("done");
+            
             setSeverity("info");
             seterrpopup(true);
             seterrmsg(res.data.responseMessage);
@@ -189,7 +189,7 @@ export default function Login() {
         })
         .catch((err) => {
           setIsLoading(false);
-          console.log(err.message);
+          
           setSeverity("error");
           seterrpopup(true);
           if (err.response) {
@@ -229,14 +229,14 @@ export default function Login() {
       .catch((err) => {
         setIsDataLoading(false);
 
-        console.log("err");
+        
       });
   };
 
   useEffect(() => {
     const id = location.search.substring(1, location.search.length);
     const reportId = location.hash.substring(1, location.hash.length);
-    console.log("reportId", reportId);
+    
     if (reportId) {
       setReportID(reportId);
     }

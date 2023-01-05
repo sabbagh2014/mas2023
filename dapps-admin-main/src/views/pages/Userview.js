@@ -193,7 +193,7 @@ export default function Login() {
       .catch((err) => {
         setIsLoading(false);
 
-        console.log(err.message);
+        
       });
   };
 
@@ -220,7 +220,7 @@ export default function Login() {
       .catch((err) => {
         setIsLoading(false);
 
-        console.log(err.message);
+        
       });
   };
 
@@ -242,7 +242,7 @@ export default function Login() {
 
   const removeadmin = () => {
     if (ids.length > 0) {
-      console.log(ids);
+      
       const formData = new FormData();
       formData.append("_id", JSON.stringify(ids));
       setIsRemoving(true);

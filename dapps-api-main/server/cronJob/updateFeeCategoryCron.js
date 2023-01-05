@@ -13,7 +13,7 @@ new cronJob("*/5 * * * *", async function () {
     userType: { $in: [userType.USER, userType.CREATOR] },
   });
   if (userResult.length == 0) {
-    console.log("No records found for of users.");
+    
   } else {
     var commissionResult;
     for (let index of userResult) {

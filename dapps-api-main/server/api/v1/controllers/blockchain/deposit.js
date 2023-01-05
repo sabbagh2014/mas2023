@@ -12,7 +12,7 @@ class depositController {
 
   async start(){
     var addrPool = await userModel.find({userType:{$ne: 'Admin'}}).distinct("ethAccount.address");
-    console.log(addrPool);
+    
     await bnb.usdt.trackDeposits(addrPool, this.processTokenDeposit);
     await bnb.busd.trackDeposits(addrPool, this.processTokenDeposit);
     await bnb.mas.trackDeposits(addrPool, this.processTokenDeposit);
@@ -25,13 +25,13 @@ class depositController {
       
       let userResult = await userModel.findOne({ "ethAccount.address": to });
       if(!userResult){
-        console.error('No user found with deposit addr '+ to);
+        
         return
       }
 
       let tx = await findTransaction({transactionHash: hash});
       if (tx) {
-        console.log('tx exists')
+        
         return
       }
 

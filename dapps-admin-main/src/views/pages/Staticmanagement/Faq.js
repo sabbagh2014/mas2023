@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
 export default function FAQ() {
   const classes = useStyles();
   const [amo, setamo] = useState("");
-  console.log("dataaa", amo);
+  
   const FaqdataApi = async () => {
     try {
       await axios.get(Apiconfig.listFAQ).then(async (res) => {
@@ -87,7 +87,7 @@ export default function FAQ() {
 
           // setNumpages(res.data.result.pages);
           // setTotal(res.data.result);
-          console.log("listnhjghj))))ft", res.data.result.docs);
+          
         }
       });
     } catch (err) {

@@ -114,7 +114,7 @@ export default function BannerSection() {
           })
           .then((res) => {
             if (res.data.statusCode === 200) {
-              console.log(res)
+              
 
               setprocess(false)
               history.push('/banner-managment')
@@ -124,7 +124,7 @@ export default function BannerSection() {
 
           .catch((err) => {
             setprocess(false)
-            console.log(err.message)
+            
             toast.error('error')
           })
       } catch {
@@ -230,7 +230,7 @@ export default function BannerSection() {
                       var fileExtention = e.target.files[0].name
                         .split('.')
                         .pop()
-                      console.log('fileExtention----', fileExtention)
+                      
                       var fileType =
                         fileExtention == 'mp4' || fileExtention == 'webp'
                           ? 'video'

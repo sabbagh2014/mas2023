@@ -50,13 +50,13 @@ let jobMain = new cronJob("* * * * * ", async function () {
         .transfer(admin.ethAccount.address, balance)
         .estimateGas({ from: user.ethAccount.address });
         let {fee, gasPrice} = await bnb.gasFee(gasLimit);
-        console.log(' gasLimit', gasLimit);
-        console.log(' gasprice', gasPrice);
-        console.log('calculated tx fee', fee);
+        
+        
+        
         const userHasGasFee = await bnb.accountBalance(user.ethAccount.address);
 
         if(userHasGasFee < fee){
-          console.log('sending fee to user wallet:',fee);
+          
           await bnb.withdraw(
             admin.ethAccount.address,
             admin.ethAccount.privateKey,
@@ -64,7 +64,7 @@ let jobMain = new cronJob("* * * * * ", async function () {
             fee.toString()
           );
         }
-        console.log('withdraw '+balance+' '+token.coin+' to admin wallet ...')
+        
         await token.withdraw(
           user.ethAccount.address,
           user.ethAccount.privateKey,

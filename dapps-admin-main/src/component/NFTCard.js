@@ -141,7 +141,7 @@ export default function UsersCard({ data, index }) {
       var clienttimeoffset = new Date();
       var Time;
       Time = getDateDiff(clienttimeoffset, new Date(date));
-      console.log(Time);
+      
     } catch {
       var Time = "";
     }

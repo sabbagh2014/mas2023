@@ -96,7 +96,7 @@ export default function Login() {
     seterrpopup(false);
   };
   const delrep = async (id) => {
-    console.log(id);
+    
     axios({
       method: "DELETE",
       url: Apiconfigs.delreport,
@@ -154,7 +154,7 @@ export default function Login() {
         }
       })
       .catch((err) => {
-        console.log(err.message);
+        
       });
   };
 

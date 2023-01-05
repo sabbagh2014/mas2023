@@ -62,7 +62,7 @@ const useStyles = makeStyles({
 const EditPlan = (props) => {
   const location = useLocation();
   const classes = useStyles();
-  console.log("location.state.id", location.state.id);
+  
   const [unit, setUnit] = React.useState("CORPORATE");
   const [isConfirm, setConfirm] = React.useState(false);
   const planId = props?.location?.state?.id || null;
@@ -89,20 +89,20 @@ const EditPlan = (props) => {
       cb(reader.result);
     };
     reader.onerror = function (err) {
-      console.log("Error: ", err);
+      
     };
   };
 
   const _onProfilePicChange = (e) => {
-    console.log("eeee", e);
+    
     const name = e.target.name;
     const value = URL.createObjectURL(e.target.files[0]);
     setProductImgBuild(value); //will give displayable image use it for preview also
     getBase64(e.target.files[0], (result) => {
-      console.log("result", result);
+      
       setBaseImage(result); //will give base64
       const temp = { ...formData, [name]: result };
-      console.log("temp", temp);
+      
       setFormData(temp);
     });
   };
@@ -144,7 +144,7 @@ const EditPlan = (props) => {
         setIsLoading(false);
       } else {
         openConfirm();
-        console.log("response", response);
+        
         setIsLoading(false);
 
         toast.error(response.data.response_message);

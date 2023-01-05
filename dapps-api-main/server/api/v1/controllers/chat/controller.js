@@ -110,7 +110,7 @@ class chatController {
         return res.json(apiError.notFound(responseMessage.DATA_NOT_FOUND));
       }
 
-      console.log(req.body.ids.split(","));
+      
 
       await readMsg(req.body.ids.split(","));
 

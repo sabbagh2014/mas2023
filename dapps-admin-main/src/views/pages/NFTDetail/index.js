@@ -173,7 +173,7 @@ export default function Login() {
   const [severity, setSeverity] = useState("info");
   const [errmsg, seterrmsg] = React.useState("");
   const [auctionDetails, setAuctionDetails] = useState();
-  console.log("auctionDetails", auctionDetails);
+  
   const [allBidList, setAllBidList] = useState([]);
   const classes = useStyles();
   const getAuctionDetails = async (id) => {
@@ -186,7 +186,7 @@ export default function Login() {
       },
     })
       .then(async (res) => {
-        console.log("res.data.result", res.data.result);
+        
         if (res.data.statusCode === 200) {
           setAuctionDetails(res.data.result);
           getBidList(res.data.result.orderId._id);
@@ -195,7 +195,7 @@ export default function Login() {
       })
       .catch((err) => {
         setIsLoading(false);
-        console.log(err.message);
+        
       });
   };
 
@@ -209,7 +209,7 @@ export default function Login() {
           token: window.sessionStorage.getItem("AccessToken"),
         },
       });
-      console.log("getBidList", res);
+      
       if (res.data.statusCode === 200) {
         setAllBidList(res.data.result);
       }

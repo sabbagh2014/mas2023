@@ -22,9 +22,9 @@ Mongoose.model("social", schemaDefination).find(
   { status: { $ne: status.DELETE } },
   async (err, result) => {
     if (err) {
-      console.log("Default social creation error", err);
+      
     } else if (result.length != 0) {
-      console.log("Default social already created.");
+      
     } else {
       let obj1 = {
         title: "Facebook",
@@ -54,9 +54,9 @@ Mongoose.model("social", schemaDefination).find(
         obj5,
         (err1, staticResult) => {
           if (err1) {
-            console.log("Default social error.", err1);
+            
           } else {
-            console.log("Default social created.", staticResult);
+            
           }
         }
       );

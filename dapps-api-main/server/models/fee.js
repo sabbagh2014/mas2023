@@ -31,9 +31,9 @@ Mongoose.model("fee", feeSchema).find(
   { status: { $ne: status.DELETE } },
   async (err, result) => {
     if (err) {
-      console.log("Default fee creation error", err);
+      
     } else if (result.length != 0) {
-      console.log("Default fee already created.");
+      
     } else {
       let obj1 = {
         planType: "Basic",
@@ -73,9 +73,9 @@ Mongoose.model("fee", feeSchema).find(
         obj5,
         (err1, staticResult) => {
           if (err1) {
-            console.log("Default fee error.", err1);
+            
           } else {
-            console.log("Default fee created.", staticResult);
+            
           }
         }
       );

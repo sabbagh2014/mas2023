@@ -207,7 +207,7 @@ class userController {
       }
 
       const verifyEmail = await Twilio.sendVerification(email,'email', 'register', userName);
-      console.log("verifyEmail",verifyEmail)
+      
       if(verifyEmail.status == 400){
         return res.json(new response({email_verification_sent:false}, "Email invalid", 400));
       }
@@ -456,7 +456,7 @@ class userController {
       }
 
       const verifyEmail = await Twilio.sendVerification(email,'email','reset_password', userResult.userName);
-      console.log("verifyEmail",verifyEmail)
+      
       if(verifyEmail.status == 400){
         return res.json(new response({email_verification_sent:false}, "Email invalid", 400));
       }
@@ -511,7 +511,7 @@ class userController {
         return res.json(new response({verified:false}, "Error invalid request", 401));
       }
       const verify = await Twilio.checkVerification(userResult.email, otp);
-      console.log('to', verify);
+      
       if(verify.status == "400"){
         return res.json(new response({verified:false}, "Email invalid", 400));
       }

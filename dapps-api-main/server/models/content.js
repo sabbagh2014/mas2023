@@ -27,9 +27,9 @@ const schemaDefination = new Schema(
 module.exports = Mongoose.model("landing_content", schemaDefination);
 Mongoose.model("landing_content", schemaDefination).find({}, (err, result) => {
   if (err) {
-    console.log("Default landing content error", err);
+    
   } else if (result.length != 0) {
-    console.log("Default landing content");
+    
   } else {
     var obj = {
       type: "solution",
@@ -70,9 +70,9 @@ Mongoose.model("landing_content", schemaDefination).find({}, (err, result) => {
       obj2,
       (contentErr, contentResult) => {
         if (contentErr) {
-          console.log("Landing content error.", contentErr);
+          
         } else {
-          console.log("Landing content created.", contentResult);
+          
         }
       }
     );

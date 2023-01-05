@@ -157,7 +157,7 @@ export default function UsersCard({ data, index, updateList }) {
         }
       })
       .catch((res) => {
-        console.log(res.message);
+        
       });
   };
 

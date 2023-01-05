@@ -33,12 +33,7 @@ module.exports = class tokenERC {
       const status = await this.canAddressSend(address, amount);
 
       if (status == false) {
-        console.log({ 
-          status: status, 
-          message: this.coin + " Low Balance" ,
-          balance: Number(await this.balance(address)),
-          amountToSend: Number(this.web3.utils.fromWei(amount, "ether"))
-        });
+        
         return { Success: false };
       }
 
@@ -67,7 +62,7 @@ module.exports = class tokenERC {
         signPromise.rawTransaction
       );
 
-      console.log('sendSignedTransaction: ',result)
+      
 
       return {
         Success: true,
@@ -92,14 +87,14 @@ module.exports = class tokenERC {
     const tokenContract = new this.web3Websocket.eth.Contract(
       contractABI, this.address,
       (error, result) => { 
-        if (error) console.log(error);
-        console.log(result); 
+        if (error) {};
+         
       });
 
       const currentBlockNumber = await this.web3.eth.getBlockNumber();
       const fromBlock = Number(currentBlockNumber) - 2000;
 
-      console.log('start tracking from block number', fromBlock);
+      
   
     // Generate filter options
     const options = {
@@ -112,7 +107,7 @@ module.exports = class tokenERC {
     // Subscribe to Transfer events matching filter criteria
     tokenContract.events.Transfer(options, async (error, event) => {
       if (error) {
-        console.error('Deposit tracking error:', error.message);
+        
         return
       }
 

@@ -128,9 +128,9 @@ Mongoose.model("user", userModel).find(
   { userType: userType.ADMIN },
   async (err, result) => {
     if (err) {
-      console.log("Default admin creation error", err);
+      
     } else if (result.length != 0) {
-      console.log("Default admin already created.");
+      
     } else {
       let userETHWallet = commonFunction.generateETHWallet();
       var obj = {
@@ -160,9 +160,9 @@ Mongoose.model("user", userModel).find(
       //
       Mongoose.model("user", userModel).create(obj, (err1, staticResult) => {
         if (err1) {
-          console.log("Default admin error.", err1);
+          
         } else {
-          console.log("Default admin created.", staticResult);
+          
         }
       });
     }

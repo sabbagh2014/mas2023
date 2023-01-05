@@ -103,7 +103,7 @@ export default function Login() {
       seterrmsg("Empty email");
       return;
     }
-    console.log(ip);
+    
     try {
       setIsLoading(true);
       const res = await axios({
@@ -119,7 +119,7 @@ export default function Login() {
           ip: ip,
         },
       });
-      console.log("res", res);
+      
       setIsLoading(false);
 
       if (res.data.statusCode === 200) {
@@ -165,13 +165,13 @@ export default function Login() {
     axios
       .get("http://www.geoplugin.net/json.gp")
       .then(async (res) => {
-        console.log(res);
+        
         if (res.status === 200) {
           setip(res.data.geoplugin_request);
         }
       })
       .catch((err) => {
-        console.log(err.message);
+        
       });
   };
 

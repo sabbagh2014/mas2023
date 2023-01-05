@@ -44,7 +44,7 @@ const Editcontent = () => {
   const history = useHistory();
   const [amo, setamo] = useState("");
   const [title, settitle] = useState("");
-  console.log("title", title);
+  
 
   //
 
@@ -58,7 +58,7 @@ const Editcontent = () => {
   const [Type, setType] = useState("");
   const [description, setdescription] = useState("");
   const accessToken = window.sessionStorage.getItem("AccessToken");
-  console.log("description", description);
+  
   const addStaticContent = async () => {
     await axios
       .post(
@@ -81,7 +81,7 @@ const Editcontent = () => {
           history.push("/Termsof-Use");
           // setNumpages(res.data.result.pages);
           // setTotal(res.data.result);
-          console.log("listnhjghj))))ft", res.data.result.docs);
+          
         }
       });
   };

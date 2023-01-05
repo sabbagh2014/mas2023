@@ -173,7 +173,7 @@ export default function EditSocial() {
   const classes = useStyles();
   const history = useHistory();
   const location = useLocation();
-  console.log("location---", location);
+  
   const [link, setLink] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const statics = location.state.id;
@@ -181,7 +181,7 @@ export default function EditSocial() {
   const [socailLink, setSocialLink] = useState(
     statics?.link ? statics?.link : ""
   );
-  console.log("statics----", socailLink);
+  
 
   const submitHandler = async () => {
     try {

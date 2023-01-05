@@ -28,7 +28,7 @@ let jobMain = new cronJob("*/10 * * * * *", async function () {
     transactionStatus: "PENDING",
   });
   if (getBufferResult.length == 0) {
-    console.log("No records found for subscribe buffer dbs.");
+    
   } else {
     jobMain.stop();
     let obj = {
@@ -165,10 +165,7 @@ let jobMain = new cronJob("*/10 * * * * *", async function () {
               transactionHash: transactionHash.data.Hash,
             }
           );
-          console.log(
-            "Successfully completed transaction for id  ",
-            getBufferResult[0]._id
-          );
+          
           jobMain.stop();
           jobMain.start();
         } catch (error) {
@@ -216,10 +213,7 @@ let jobMain = new cronJob("*/10 * * * * *", async function () {
               transactionHash: transactionHash.data.Hash,
             }
           );
-          console.log(
-            "Successfully completed transaction for id  ",
-            getBufferResult[0]._id
-          );
+          
           jobMain.stop();
           jobMain.start();
         } catch (error) {
@@ -242,7 +236,7 @@ let jobMain = new cronJob("*/10 * * * * *", async function () {
               coin: getBufferResult[0].coin,
             }
           );
-          console.log("106== ETH && BNB =====>>", transactionHash.data);
+          
           sendNotification(
             getBufferResult[0].userId,
             transactionHash.data.Hash
@@ -270,10 +264,7 @@ let jobMain = new cronJob("*/10 * * * * *", async function () {
               transactionHash: transactionHash.data.Hash,
             }
           );
-          console.log(
-            "Successfully completed transaction for id  ",
-            getBufferResult[0]._id
-          );
+          
           jobMain.stop();
           jobMain.start();
         } catch (error) {
@@ -290,16 +281,13 @@ let jobMain = new cronJob("*/10 * * * * *", async function () {
           privateKey: getBufferResult[0].privateKey,
           coin: getBufferResult[0].coin,
         };
-        console.log("transObj===>>>>>", transObj);
+        
         try {
           transactionHash = await axios.post(
             `${blockchainUrl}/distributeTokens`,
             transObj
           );
-          console.log(
-            "151== MAS && BUSD && BNB ====>>",
-            transactionHash.data.Hash
-          );
+          
           sendNotification(
             getBufferResult[0].userId,
             transactionHash.data.Hash
@@ -327,10 +315,7 @@ let jobMain = new cronJob("*/10 * * * * *", async function () {
               transactionHash: transactionHash.data.Hash,
             }
           );
-          console.log(
-            "Successfully completed transaction for id  ",
-            getBufferResult[0]._id
-          );
+          
           jobMain.stop();
           jobMain.start();
         } catch (error) {
@@ -359,7 +344,7 @@ const addUserIntoFeed = async (nftId, userId) => {
     status: { $ne: status.DELETE },
   });
   audienceRes = audienceRes.map((i) => i._id);
-  console.log("audienceRes==>>", audienceRes);
+  
   await feedUpdateAll(
     { _id: { $in: audienceRes } },
     { $addToSet: { users: userId } }

@@ -56,10 +56,10 @@ class ExpressServer {
         },
         (err) => {
           if (err) {
-            console.log(`Error in mongodb connection ${err.message}`);
+            
             return reject(err);
           }
-          console.log("Mongodb connection established");
+          
 
           return resolve(this);
         }
@@ -69,10 +69,7 @@ class ExpressServer {
 
   listen(port) {
     server.listen(port, () => {
-      console.log(
-        `secure app is listening @port ${port}`,
-        new Date().toLocaleString()
-      );
+      
     });
     return app;
   }
@@ -122,8 +119,8 @@ global.onlineUsers = new Map();
 
 io.sockets.on("connection", async (socket) => {
   const user = socket.userID.toString();
-  console.log('new connection', socket.userName);
-  console.log('online users', onlineUsers.size, [...onlineUsers.keys()])
+  
+  
 
   if (onlineUsers.has(user)) {
     onlineUsers.set(user, onlineUsers.get(user).add(socket.id));
@@ -155,17 +152,17 @@ io.sockets.on("connection", async (socket) => {
   });
 
   socket.on("disconnecting", () => {
-    console.log(socket.rooms, 'disconnecting'); // the Set contains at least the socket ID
+     // the Set contains at least the socket ID
   });
 
   socket.on("disconnect", async () => {
-    console.log(socket.userName, 'disconnect');
+    
     onlineUsers.get(user).delete(socket.id);
     if (onlineUsers.get(user).size == 0) {
       onlineUsers.delete(user);
       io.emit("notify", { onlineusers: [...onlineUsers.keys()] });
     }
-    console.log('online users', onlineUsers.size, [...onlineUsers.keys()])
+    
   });
 
   socket.on("error", (err) => {

@@ -45,7 +45,7 @@ const Editcontent = () => {
   const history = useHistory();
   const [amo, setamo] = useState("");
   const [title, settitle] = useState("");
-  console.log("title", title);
+  
 
   //
 
@@ -61,15 +61,15 @@ const Editcontent = () => {
   const [idds, setIdd] = useState("");
   const [description, setdescription] = useState("");
   const accessToken = window.sessionStorage.getItem("AccessToken");
-  console.log("description", description);
-  console.log("idd", idds);
+  
+  
   const formData = new FormData();
 
   // formData.append("staticId", idd);
   // console.log("idd++++++dfghdfg+++>>>>>", idd);
   const addEditStaticContent = async (idd) => {
     // formData.append("staticId", idd);
-    console.log("hhh", idds);
+    
     try {
       if (idd !== "") {
         await axios
@@ -97,7 +97,7 @@ const Editcontent = () => {
               history.push("/Termsof-Use");
               // setNumpages(res.data.result.pages);
               // setTotal(res.data.result);
-              console.log("listnhjghj))))ft", res.data.result.docs);
+              
             }
           });
       }

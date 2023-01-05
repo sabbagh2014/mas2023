@@ -156,11 +156,11 @@ export default function StaticContent(props) {
             // console.log(result)
             setUsers(response.data.result)
             // setNumpages(response.data.result.pages);
-            console.log(response)
+            
           }
         })
         .catch((response) => {
-          console.log('response', response)
+          
         })
     },
     [filterData, pages],

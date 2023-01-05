@@ -34,7 +34,7 @@ module.exports = {
     },
     checkVerification: async (to, otp) => {
         try {
-            console.log(to,otp);
+            
             return await client.verify.v2.services(VerificationServiceId)
             .verificationChecks
             .create({to: to, code: otp});
