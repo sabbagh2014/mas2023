@@ -115,8 +115,8 @@ export const VerifyOtp = ({
       });
       if (res.data.statusCode === 200) {
         setloader(false);
-        channel === 'email' && setemailResendTimer(60);
-        channel === 'sms' && setsmsResendTimer(60);
+        
+        
         toast.success(res.data.responseMessage);
       } else {
         toast.error(res.data.responseMessage);
